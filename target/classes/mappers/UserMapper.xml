@@ -1,0 +1,14 @@
+<!DOCTYPE mapper  
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.tuandai.ms.portal.dao.UserDao">
+  
+  	<select id="selectByPrimaryKey" parameterType="int" resultType="com.tuandai.ms.portal.domain.User">
+  		select * from user where id=#{id}
+  	</select>
+  	
+  	<select id="selectByUsernameAndPassword" resultType="com.tuandai.ms.portal.domain.User">
+  		select * from user where username = #{username,jdbcType=VARCHAR} and password=#{password,jdbcType=VARCHAR}
+  	</select>
+  	
+</mapper>

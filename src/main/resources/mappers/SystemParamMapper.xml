@@ -1,0 +1,9 @@
+<!DOCTYPE mapper  
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.tuandai.ms.portal.dao.SystemParamDao">
+  
+  	<select id="selectByCode" parameterType="String" resultType="com.tuandai.ms.portal.domain.SystemParam">
+  		select * from systemparam where code=#{code}
+  	</select>
+</mapper>
